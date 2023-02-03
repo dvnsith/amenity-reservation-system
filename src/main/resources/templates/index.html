@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Amenities Reservation</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css}"/>
+</head>
+<body>
+
+<div>
+    <div th:insert="fragments/nav :: nav"></div>
+    <div class="text-light" style="background-image: url('https://source.unsplash.com/1920x1080/?apartment');
+                                   position: absolute;
+                                   left: 0;
+                                   top: 0;
+                                   opacity: 0.6;
+                                   z-index: -1;
+                                   min-height: 100vh;
+                                   min-width: 100vw;">
+    </div>
+
+    <div class="container" style="padding-top: 20vh; display: flex; flex-direction: column; align-items: center;">
+        <h1 class="display-3" style="text-align: center;">Welcome Home.</h1>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <p class="lead">Rise to the top with Ollie's stunning details,
+                incredible amenities, and extraordinary service.
+                Our luxury high-rise apartment homes in Bark Town will
+                change the way you experience Seattle. Reserve an amenity today!</p>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+        <a href="/reservations" class="btn btn-lg my-2" style="background-color: #304E36; color:#FFFFFF">RESERVE</a>
+    </div>
+</div>
+
+<script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/1.12.9-1/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.0.0-2/js/bootstrap.min.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+    <body>
+        <nav th:fragment="nav" class="navbar navbar-expand navbar-dark" style="background-color: #FFFFFF;">
+            <div class="navbar-nav w-100">
+                <a class="navbar-brand" style="color: #304E36;" href="/">
+                    <img src="https://i.imgur.com/QbP53Uh.png"/>
+                </a>
+
+            </div>
+
+            <img class="navbar-brand" alt="logo" src="https://i.imgur.com/4XTkFoF.png"
+                 style="position: absolute;
+                        height: 60px;
+                        width: 180px;
+                        margin: 0 auto;
+                        display: block;
+                        left: calc((100% - 180px) / 2);
+                        z-index: 100000;"/>
+
+            <a sec:authorize="isAnonymous()"
+               class="navbar-brand text-color" style="color: #304E36;" th:href="@{/login}"><button type="button" class="btn" style="background-color: #304E36; color:#FFFFFF;">LOG IN</button></a>
+            <a sec:authorize="isAuthenticated()"
+                   class="navbar-brand text-color" style="color: #304E36;" th:href="@{/logout}"><button type="button" class="btn" style="background-color: #304E36; color:#FFFFFF;">LOG OUT</button></a>
+        </nav>
+    </body>
+</html>
